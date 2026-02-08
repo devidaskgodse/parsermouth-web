@@ -6,6 +6,7 @@ app = marimo.App(width="medium")
 with app.setup:
     import marimo as mo
     from io import BytesIO, StringIO
+    import re
     from contextlib import contextmanager
     import pandas as pd
 
@@ -72,48 +73,45 @@ def read_log_general(filename_or_fileobj, is_binary=False):
     return pd.read_csv(StringIO(full_text), sep=r'\s+')
 
 
-@app.cell
-def _(re):
-    def read_chunk_general(filename_or_fileobj, is_binary=False):
-        mode = 'rb' if is_binary else 'r'
+@app.function
+def read_chunk_general(filename_or_fileobj, is_binary=False):
+    mode = 'rb' if is_binary else 'r'
 
-        with open_input(filename_or_fileobj, mode=mode) as f:
-            raw_data = f.read()
+    with open_input(filename_or_fileobj, mode=mode) as f:
+        raw_data = f.read()
 
-        # If the data is bytes, decode it to a string first
-        if isinstance(raw_data, bytes):
-            content = raw_data.decode('utf-8')
-        else:
-            content = raw_data
+    # If the data is bytes, decode it to a string first
+    if isinstance(raw_data, bytes):
+        content = raw_data.decode('utf-8')
+    else:
+        content = raw_data
 
-        lines = content.splitlines()
+    lines = content.splitlines()
 
-        # extract the timestamp from line 4 (index 3)
-        end_timestamp = lines[3].split()[0]
+    # extract the timestamp from line 4 (index 3)
+    end_timestamp = lines[3].split()[0]
 
-        # extract headers from line 3 after the "# " (index 2)
-        raw_headers = lines[2].split()[1:]
+    # extract headers from line 3 after the "# " (index 2)
+    raw_headers = lines[2].split()[1:]
 
-        # clean the headers: remove "c_", "v_", "[" and "]"
-        cleaned_headers = [re.sub(r"c_|v_|\[|\]", "", h) for h in raw_headers]
+    # clean the headers: remove "c_", "v_", "[" and "]"
+    cleaned_headers = [re.sub(r"c_|v_|\[|\]", "", h) for h in raw_headers]
 
-        final_headers = ["timestep"] + cleaned_headers
+    final_headers = ["timestep"] + cleaned_headers
 
-        # parse data rows
+    # parse data rows
 
-        # join the lines (from index 4 onwards) into one large string
-        data_body = "\n".join(lines[4:])
+    # join the lines (from index 4 onwards) into one large string
+    data_body = "\n".join(lines[4:])
 
-        # read the data using a whitespace separator
-        # sep=r'\s+' handles any number of spaces or tabs
-        df = pd.read_csv(StringIO(data_body), sep=r'\s+', names=final_headers[1:])
+    # read the data using a whitespace separator
+    # sep=r'\s+' handles any number of spaces or tabs
+    df = pd.read_csv(StringIO(data_body), sep=r'\s+', names=final_headers[1:])
 
-        # insert the timestamp as the first column
-        df.insert(0, final_headers[0], pd.to_numeric(end_timestamp))
+    # insert the timestamp as the first column
+    df.insert(0, final_headers[0], pd.to_numeric(end_timestamp))
 
-        return df
-
-    return (read_chunk_general,)
+    return df
 
 
 @app.function
@@ -169,7 +167,7 @@ def read_dump_general(filename_or_fileobj, is_binary=False):
 
 
 @app.cell
-def _(read_chunk_general):
+def _():
     # File input and dropdown
     file_input = mo.ui.file(label="Upload file", kind='area')
 
