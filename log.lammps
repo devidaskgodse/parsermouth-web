@@ -1,0 +1,237 @@
+run         1000000
+Generated 0 of 3 mixed pair_coeff terms from geometric mixing rule
+Neighbor list info ...
+  update: every = 1 steps, delay = 0 steps, check = yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 2.6
+  ghost atom cutoff = 2.6
+  binsize = 1.3, bins = 16 16 154
+  2 neighbor lists, perpetual/occasional/extra = 1 1 0
+  (1) pair granular, perpetual
+      attributes: half, newton on, size
+      pair build: half/size/bin/atomonly/newton
+      stencil: half/bin/3d
+      bin: standard
+  (2) compute contact/atom, occasional, copy from (1)
+      attributes: half, newton on, size
+      pair build: copy
+      stencil: none
+      bin: none
+Per MPI rank memory allocation (min/avg/max) = 5.102 | 5.102 | 5.102 Mbytes
+   Step         KinEng     c_kepa_mobile       Temp      c_temp_mobile 
+         0   0              0              0              0            
+     10000   33628302       6725.6486      3.2475807e+19  3.2482247e+19
+     20000   32654210       6530.4363      3.1535098e+19  3.1539448e+19
+     30000   31815683       6361.2618      3.0725309e+19  3.0722401e+19
+     40000   31257090       6250.8689      3.018586e+19   3.0189247e+19
+     50000   30702529       6139.4225      2.9650305e+19  2.9651004e+19
+     60000   30208606       6037.539       2.9173309e+19  2.9158947e+19
+     70000   29900675       5977.4167      2.8875932e+19  2.886858e+19 
+     80000   29469160       5891.3259      2.8459206e+19  2.8452795e+19
+     90000   29165233       5829.6409      2.8165694e+19  2.8154881e+19
+    100000   28821531       5763.3373      2.7833772e+19  2.783466e+19 
+    110000   28534820       5706.1548      2.7556886e+19  2.7558491e+19
+    120000   28252289       5648.0433      2.7284039e+19  2.7277835e+19
+    130000   27970836       5593.671       2.7012231e+19  2.7015239e+19
+    140000   27664414       5531.7996      2.6716311e+19  2.6716424e+19
+    150000   27398033       5479.3068      2.645906e+19   2.6462904e+19
+    160000   27100302       5419.5782      2.6171532e+19  2.6174439e+19
+    170000   26794564       5357.7345      2.5876272e+19  2.5875758e+19
+    180000   26426647       5282.1118      2.5520964e+19  2.551053e+19 
+    190000   26186510       5235.6411      2.5289057e+19  2.5286094e+19
+    200000   25871477       5173.9184      2.4984821e+19  2.4987998e+19
+    210000   25567855       5112.2295      2.4691604e+19  2.4690065e+19
+    220000   25270397       5050.6696      2.440434e+19   2.4392754e+19
+    230000   24938745       4987.5258      2.4084055e+19  2.4087794e+19
+    240000   24651821       4928.3955      2.3806964e+19  2.3802218e+19
+    250000   24393296       4876.9657      2.3557299e+19  2.3553833e+19
+    260000   23987945       4796.9626      2.3165841e+19  2.3167449e+19
+    270000   23627453       4724.8347      2.2817703e+19  2.28191e+19  
+    280000   23393251       4678.3388      2.2591527e+19  2.2594543e+19
+    290000   23030077       4604.3023      2.22408e+19    2.2236975e+19
+    300000   22768719       4551.9099      2.1988399e+19  2.1983941e+19
+    310000   22470935       4491.898       2.1700821e+19  2.1694107e+19
+    320000   22163678       4431.8718      2.1404094e+19  2.1404204e+19
+    330000   21950212       4389.6507      2.1197944e+19  2.1200292e+19
+    340000   21625493       4323.4036      2.0884353e+19  2.0880345e+19
+    350000   21384902       4275.6102      2.0652008e+19  2.0649521e+19
+    360000   21104663       4219.8994      2.0381373e+19  2.038046e+19 
+    370000   20813631       4161.9193      2.0100316e+19  2.0100439e+19
+    380000   20623913       4124.6645      1.9917099e+19  1.9920513e+19
+    390000   20325184       4063.1751      1.9628608e+19  1.9623543e+19
+    400000   20083096       4015.3244      1.9394817e+19  1.9392443e+19
+    410000   19885543       3976.2796      1.9204034e+19  1.9203872e+19
+    420000   19647429       3927.2967      1.8974081e+19  1.8967304e+19
+    430000   19406327       3879.5202      1.8741242e+19  1.8736562e+19
+    440000   19234799       3845.7146      1.8575592e+19  1.8573294e+19
+    450000   19059055       3810.5932      1.8405871e+19  1.8403672e+19
+    460000   18867030       3771.3746      1.8220427e+19  1.8214261e+19
+    470000   18681433       3733.8492      1.804119e+19   1.8033028e+19
+    480000   18566939       3711.7429      1.7930621e+19  1.7926263e+19
+    490000   18397540       3679.0699      1.7767027e+19  1.7768465e+19
+    500000   18254857       3650.5937      1.7629234e+19  1.7630937e+19
+    510000   18085475       3616.5607      1.7465658e+19  1.7466571e+19
+    520000   17987365       3596.8745      1.737091e+19   1.7371494e+19
+    530000   17814259       3561.1002      1.7203736e+19  1.7198718e+19
+    540000   17735913       3547.0428      1.7128076e+19  1.7130826e+19
+    550000   17583409       3516.5474      1.6980798e+19  1.6983545e+19
+    560000   17449784       3489.8935      1.6851753e+19  1.6854818e+19
+    570000   17333745       3466.4642      1.673969e+19   1.6741663e+19
+    580000   17180003       3435.6293      1.6591217e+19  1.6592743e+19
+    590000   17098307       3418.9512      1.6512321e+19  1.6512194e+19
+    600000   17077304       3415.3264      1.6492038e+19  1.6494688e+19
+    610000   16997419       3399.1495      1.6414891e+19  1.641656e+19 
+    620000   16819085       3363.644       1.6242668e+19  1.6245082e+19
+    630000   16736560       3347.073       1.6162972e+19  1.6165051e+19
+    640000   16630956       3325.9753      1.6060987e+19  1.6063157e+19
+    650000   16553779       3310.4591      1.5986455e+19  1.598822e+19 
+    660000   16476871       3295.0016      1.5912183e+19  1.5913566e+19
+    670000   16482492       3295.4639      1.5917611e+19  1.5915799e+19
+    680000   16395903       3277.9289      1.583399e+19   1.5831112e+19
+    690000   16343209       3267.6425      1.5783101e+19  1.5781433e+19
+    700000   16255426       3251.0077      1.5698327e+19  1.5701093e+19
+    710000   16136143       3226.9946      1.5583132e+19  1.5585119e+19
+    720000   16016713       3203.3043      1.5467795e+19  1.5470704e+19
+    730000   15960091       3191.7803      1.5413113e+19  1.5415048e+19
+    740000   15914774       3181.8219      1.536935e+19   1.5366953e+19
+    750000   15820225       3163.913       1.5278041e+19  1.528046e+19 
+    760000   15751770       3150.1564      1.5211932e+19  1.5214021e+19
+    770000   15657061       3130.3546      1.5120469e+19  1.5118386e+19
+    780000   15620205       3122.3288      1.5084876e+19  1.5079624e+19
+    790000   15539336       3107.3458      1.5006779e+19  1.5007262e+19
+    800000   15437458       3087.3854      1.4908392e+19  1.4910861e+19
+    810000   15265950       3052.9249      1.4742762e+19  1.4744431e+19
+    820000   15146295       3028.8959      1.4627207e+19  1.462838e+19 
+    830000   14983251       2995.8699      1.4469752e+19  1.4468878e+19
+    840000   14842182       2967.7669      1.4333517e+19  1.4333151e+19
+    850000   14724585       2944.913       1.421995e+19   1.4222776e+19
+    860000   14571895       2914.044       1.4072493e+19  1.407369e+19 
+    870000   14472566       2894.4016      1.3976569e+19  1.3978825e+19
+    880000   14351048       2869.9374      1.3859215e+19  1.3860673e+19
+    890000   14288829       2857.1996      1.3799128e+19  1.3799154e+19
+    900000   14136948       2826.9885      1.3652452e+19  1.3653246e+19
+    910000   14011692       2802.2127      1.3531489e+19  1.3533589e+19
+    920000   13908518       2780.7759      1.3431851e+19  1.3430058e+19
+    930000   13814572       2762.7379      1.3341124e+19  1.3342941e+19
+    940000   13660049       2731.6077      1.3191898e+19  1.3192594e+19
+    950000   13497208       2699.1996      1.3034638e+19  1.3036076e+19
+    960000   13403302       2680.4304      1.2943949e+19  1.2945428e+19
+    970000   13318187       2663.6113      1.2861752e+19  1.2864199e+19
+    980000   13150228       2629.7938      1.2699549e+19  1.2700873e+19
+    990000   12966028       2592.9386      1.2521661e+19  1.2522877e+19
+   1000000   12866397       2572.8626      1.2425445e+19  1.2425918e+19
+Loop time of 403.765 on 1 procs for 1000000 steps with 5001 atoms
+
+100.0% CPU use with 1 MPI tasks x 1 OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 19.619     | 19.619     | 19.619     |   0.0 |  4.86
+Neigh   | 47.99      | 47.99      | 47.99      |   0.0 | 11.89
+Comm    | 37.944     | 37.944     | 37.944     |   0.0 |  9.40
+Output  | 1.1983     | 1.1983     | 1.1983     |   0.0 |  0.30
+Modify  | 284.47     | 284.47     | 284.47     |   0.0 | 70.45
+Other   |            | 12.55      |            |       |  3.11
+
+Nlocal:           5001 ave        5001 max        5001 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:           2998 ave        2998 max        2998 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:            600 ave         600 max         600 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 600
+Ave neighs/atom = 0.119976
+Neighbor list builds = 26658
+Dangerous builds = 0
+write_restart     restart/res$i.inp
+write_restart     restart/res01.inp
+System init for write_restart ...
+Generated 0 of 3 mixed pair_coeff terms from geometric mixing rule
+
+label continue
+
+clear
+OMP_NUM_THREADS environment is not set. Defaulting to 1 thread. (src/comm.cpp:98)
+  using 1 OpenMP thread(s) per MPI task
+
+read_restart restart/res$i.inp
+read_restart restart/res01.inp
+Reading restart file ...
+  restart file = 29 Aug 2024, LAMMPS = 29 Aug 2024
+  restoring atom style sphere from restart
+  orthogonal box = (0 0 0) to (20 20 200)
+  1 by 1 by 1 MPI processor grid
+  restoring pair style granular from restart
+  5001 atoms
+  read_restart CPU = 0.000 seconds
+
+next i
+jump SELF loop
+
+variable restart_exists equal is_file(restart/res$i.inp)
+variable restart_exists equal is_file(restart/res02.inp)
+if "${restart_exists} == 1" then     "print '################################################################'"     "print '################ restart/res$i.inp detected! ###################'"     "print '################ Skipping Case: $i #############################'"     "print '################################################################'"     "jump SELF continue"
+
+include setup.lmp
+# variable amplitude equal $(df[run_id, :amp])
+# variable period equal 1.0/$(df[run_id, :freq])
+
+variable period equal 1.0/100
+
+variable T atom (vx*vx+vy*vy+vz*vz)/3
+variable vx2 atom vx*vx
+variable vy2 atom vy*vy
+variable vz2 atom vz*vz
+
+group mobile type 1
+5000 atoms in group mobile
+group intr type 2
+1 atoms in group intr
+
+comm_modify vel yes
+
+# Particle interaction model
+# Ref: https://docs.lammps.org/pair_granular.html
+pair_style granular
+pair_coeff * * hooke 9.81e6 335.056 tangential linear_nohistory 0.0 0.0 damping mass_velocity
+
+fix 1 all nve/sphere
+fix 2 all gravity 981 vector 0 0 -1.0
+fix 3 all wall/gran granular hooke 9.81e6 335.056 tangential linear_nohistory 0.0 0.0 damping mass_velocity zplane 0.0 NULL wiggle z 0.1 ${period}
+fix 3 all wall/gran granular hooke 9.81e6 335.056 tangential linear_nohistory 0.0 0.0 damping mass_velocity zplane 0.0 NULL wiggle z 0.1 0.01
+fix 4 all wall/reflect zhi EDGE
+
+compute ch all chunk/atom bin/1d z lower 0.25
+compute cols all stress/atom NULL pair
+
+compute cont mobile contact/atom intr
+
+compute ke_mobile mobile ke/atom
+compute kepa_mobile mobile reduce ave c_ke_mobile
+compute temp_mobile mobile temp
+# compute intr_contacts intr contact/atom mobile
+# compute intr_contacts_reduced all reduce sum c_intr_contacts
+
+fix 5 mobile ave/chunk 2 $(10000/2) 10000 ch density/number v_T vx vy vz v_vx2 v_vy2 v_vz2 c_cols[*] ave running file chunk/binned$i.dat overwrite
+fix 5 mobile ave/chunk 2 5000 10000 ch density/number v_T vx vy vz v_vx2 v_vy2 v_vz2 c_cols[*] ave running file chunk/binned$i.dat overwrite
+fix 5 mobile ave/chunk 2 5000 10000 ch density/number v_T vx vy vz v_vx2 v_vy2 v_vz2 c_cols[*] ave running file chunk/binned02.dat overwrite
+
+dump 1 all custom 10000 dump/out$i.dump id type radius x y z vx vy vz
+dump 1 all custom 10000 dump/out02.dump id type radius x y z vx vy vz
+
+dump 2 mobile custom 100 dump/contacts$i.dump id type radius x y z vx vy vz fx fy fz c_cont
+dump 2 mobile custom 100 dump/contacts02.dump id type radius x y z vx vy vz fx fy fz c_cont
+dump_modify 2 thresh c_cont != 0
+
+dump 3 intr custom 100 dump/intruder$i.dump id type radius x y z vx vy vz fx fy fz c_cont
+dump 3 intr custom 100 dump/intruder02.dump id type radius x y z vx vy vz fx fy fz c_cont
+
+thermo 10000
+thermo_style custom step ke c_kepa_mobile temp c_temp_mobile # c_intr_contacts_reduced
+
+timestep    1.0e-6
+run_style     verlet
+log         log/log$i.lammps
+log         log/log02.lammps
