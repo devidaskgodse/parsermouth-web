@@ -1,0 +1,14 @@
+[project]
+name = "parsermouth-web"
+version = "0.1.0"
+description = "A web demo for parsermouth package for LAMMPS"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "marimo>=0.19.9",
+    "parsermouth",
+    "pyarrow>=23.0.0",
+]
+
+[tool.uv.sources]
+parsermouth = { git = "https://github.com/devidaskgodse/parsermouth" }
